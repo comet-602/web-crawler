@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>bar</title>
+</head>
+<body>
+    <h1>bar</h1>
+    <form action="/bar" method="GET">
+
+    </form>
+
+    <br>
+    {% if request_method == 'GET' %}
+        {% for b in bar %}
+        <div>
+            {{ b.bar }}
+        </div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

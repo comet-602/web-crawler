@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>poker</title>
+</head>
+<body>
+    <h1>Title list</h1>
+    <form action="/content" method="post">
+        <h5>job_keyword</h5>
+            <input type="textbox" name="k">
+        <br>
+        <h5>job_pages</h5>
+            <input type="textbox" name="pages">
+        <br>
+        <br>
+            <button type="submit">Submit</button>
+    </form>
+
+    <br>
+    {% if request_method == 'POST' %}
+    {{ bar }}
+    <div>
+
+        {%for job in jobs%}
+            <table border="1">
+                <td length="100">
+                    {{ job }}
+                </td>
+            </table>>
+        {% endfor %}
+    </div>
+    {% endif %}
+</body>
+</html>

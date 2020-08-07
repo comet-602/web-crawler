@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>poker</title>
+</head>
+<body>
+    <h1>Title list</h1>
+    <form action="/title" method="post">
+        <input type="textbox" name="k">
+        <button type="submit">Submit</button>
+    </form>
+
+    <br>
+
+    {% if request_method == 'POST' %}
+    <div>
+        {%for card in cards%}
+            <table border="1">
+                <td length="100">
+                    {{ card }}
+                </td>
+            </table>>
+        {% endfor %}
+    </div>
+    {% endif %}
+</body>
+</html>
